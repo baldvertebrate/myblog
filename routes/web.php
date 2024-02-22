@@ -34,7 +34,7 @@ Route::get('/contact-us', function () {
     return view('layouts.contactus');
 });
 
-Auth::routes(['register' => false ]);
+Auth::routes(['register' => true ]);
 
 
 Route::middleware(['active'])->group(function () {
