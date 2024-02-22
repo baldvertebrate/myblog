@@ -404,6 +404,18 @@ return [
             'active' => ['admin/blogs', 'admin/blogs/create', 'regex:@^admin/blogs/[0-9]+$@', 'regex:@^admin/blogs/\d+/delete+$@'],
         ],
         [
+            'text' => 'Vehicles',
+            'url'  => 'admin/vehicles',
+            'icon' => 'fas fa-fw fa-book',
+            'active' => [],
+        ],
+        [
+            'text' => 'People',
+            'url'  => 'admin/people',
+            'icon' => 'fas fa-fw fa-book',
+            'active' => [],
+        ],
+        [
             'text' => 'Comments',
             'url'  => 'admin/comments',
             'icon' => 'fas fa-fw fa-comment',

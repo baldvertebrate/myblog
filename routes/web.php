@@ -7,6 +7,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminBlogController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\VehicleController;
+use App\Http\Controllers\PeopleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,7 +62,11 @@ Route::middleware(['active'])->group(function () {
         Route::delete('/admin/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
         Route::get('/admin/users/{user}/reset', [AdminUserController::class, 'reset'])->name('admin.users.reset');
         Route::patch('/admin/users/{user}', [AdminUserController::class, 'resetOk'])->name('admin.users.resetOk');
+
+        Route::get('/admin/people', [PeopleController::class, 'index'])->name('admin.people.index');
     });
+    //Vehicles
+    Route::get('/admin/vehicles', [VehicleController::class, 'index'])->name('admin.vehicles.index');
 
     Route::get('/admin/auth', [AdminAuthController::class, 'index'])->name('admin.auth.index');
     Route::put('/admin/auth', [AdminAuthController::class, 'changePassword'])->name('admin.auth.changePassword');

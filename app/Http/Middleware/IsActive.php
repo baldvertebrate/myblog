@@ -20,9 +20,7 @@ class IsActive
         if(Auth::user() && Auth::user()->role->status == 1){
             return $next($request);
         } 
-
         Auth::logout();
         return redirect(route('login'))->with('status', 'Your access has been disabled!');
-
     }
 }
