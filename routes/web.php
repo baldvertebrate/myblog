@@ -52,6 +52,9 @@ Route::middleware(['active'])->group(function () {
     Route::get('/admin/blogs/{blog}/delete', [AdminBlogController::class, 'delete'])->name('admin.blogs.delete');
     Route::delete('/admin/blogs/{blog}', [AdminBlogController::class, 'destroy'])->name('admin.blogs.destroy');
 
+    Route::get('/admin/vehicles', [VehicleController::class, 'index'])->name('admin.vehicles.index');
+    Route::get('/admin/vehicles/create', [AdminBlogController::class, 'create'])->name('admin.vehicles.create');
+
     Route::middleware(['admin'])->group(function () {
         Route::get('/admin/users', [AdminUserController::class, 'index'])->name('admin.users.index');
         Route::get('/admin/users/create', [AdminUserController::class, 'create'])->name('admin.users.create');
@@ -66,7 +69,7 @@ Route::middleware(['active'])->group(function () {
         Route::get('/admin/people', [PeopleController::class, 'index'])->name('admin.people.index');
     });
     //Vehicles
-    Route::get('/admin/vehicles', [VehicleController::class, 'index'])->name('admin.vehicles.index');
+    
 
     Route::get('/admin/auth', [AdminAuthController::class, 'index'])->name('admin.auth.index');
     Route::put('/admin/auth', [AdminAuthController::class, 'changePassword'])->name('admin.auth.changePassword');

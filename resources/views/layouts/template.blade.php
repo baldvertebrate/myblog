@@ -69,6 +69,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/About">About</a></li>
         <li><a href="/contact-us">Contact Us</a></li>
+        <li><a href="http://127.0.0.1:8000/login">Login</a></li>
       </ul>
     </div>
   </div>

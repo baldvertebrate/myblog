@@ -3,7 +3,7 @@
 @section('title', 'Vehicles')
 
 @section('content_header')
-    <h1>Blog</h1>
+    <h1>Vehicle</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
         <div class="card-header">
                 <h3 class="card-title">Vehicle List</h3>
                 <div class="card-tools">
-                    <a href="#" class="btn btn-primary form-control float-right">Add New Vehicle</a>
+                    <a href="{{route('admin.vehicles.create')}}" class="btn btn-primary form-control float-right">Add New Vehicle</a>
                 </div>
         </div>
         <div class="card-body">
@@ -35,21 +35,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                       
+                        @foreach($vehicles as $vehicle)
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$vehicle -> id}}</td>
+                                <td>{{$vehicle -> make}}</td>
+                                <td>{{$vehicle -> model}}</td>
+                                <td>{{$vehicle -> color}}</td>
+                                <td>{{$vehicle -> type}}</td>
+                                <td>{{$vehicle -> plate_number}}</td>
+                                <td>{{$vehicle -> owner_id}}</td>
                                 <td>
                                     <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr>
-                        
+                        @endforeach
                     <tr> 
                 </tbody>
             </table>
