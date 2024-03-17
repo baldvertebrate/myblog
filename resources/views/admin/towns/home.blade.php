@@ -22,34 +22,26 @@
                 </div> 
             @endif
             <table class="table table-bordered">
-                <thead>
+            <thead>
                     <tr>
                         <th style="width: 10px">ID</th>
-                        <th>Owner ID</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Color</th>
-                        <th>Type</th>
-                        <th>PlateNumber</th>
+                        <th>Name</th>
+                        <th>Zipcode</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($vehicles as $vehicle)
+                  @foreach($towns as $town)
                             <tr>
-                                <td>{{$vehicle->id}}</td>
-                                <td>{{$vehicle->owner_number}}</td>
-                                <td>{{$vehicle->make}}</td>
-                                <td>{{$vehicle->model}}</td>
-                                <td>{{$vehicle->color}}</td>
-                                <td>{{$vehicle->type}}</td>
-                                <td>{{$vehicle->plate_number}}</td>
+                                <td>{{$town->id}}</td>
+                                <td>{{$town->name}}</td>
+                                <td>{{$town->zipcode}}</td>
                                 <td>
                                     <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr> 
-                    @endforeach
+                  @endforeach
                 </tbody>
             </table>
         </div>

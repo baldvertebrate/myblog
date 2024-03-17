@@ -392,21 +392,11 @@ return [
         ],
         */
         ['header' => 'Menu'],
-        [
-            'text' => 'Dashboard',
-            'url'  => 'admin',
-            'icon' => 'fas fa-fw fa-home',
-        ],
-        [
-            'text' => 'Blogs',
-            'url'  => 'admin/blogs',
-            'icon' => 'fas fa-fw fa-book',
-            'active' => ['admin/blogs', 'admin/blogs/create', 'regex:@^admin/blogs/[0-9]+$@', 'regex:@^admin/blogs/\d+/delete+$@'],
-        ],
+
         [
             'text' => 'Vehicles',
             'url'  => 'admin/vehicles',
-            'icon' => 'fas fa-fw fa-book',
+            'icon' => 'fas fa-fw fa-motorcycle',
             'active' => [],
         ],
         [
@@ -416,12 +406,26 @@ return [
             'active' => [],
         ],
         [
-            'text' => 'Comments',
-            'url'  => 'admin/comments',
-            'icon' => 'fas fa-fw fa-comment',
-            'active' => ['admin/comments','admin/comments/create','regex:@^admin/applications/\d+/delete+$@'],
+            'text' => 'Owners',
+            'url'  => 'admin/owners',
+            'icon' => 'fas fa-fw fa-book',
+            'active' => [],
+        ],
+        ['header' => 'Address'],
+        [
+            'text' => 'Town',
+            'url'  => 'admin/towns',
+            'icon' => 'fas fa-fw fa-city',
+            'active' => [],
+        ],
+        [
+            'text' => 'Barangay',
+            'url'  => 'admin/barangays',
+            'icon' => 'fas fa-fw fa-home',
+            'active' => [],
         ],
         ['header' => 'User Management'],
+        
         [
             'text' => 'Users',
             'url'  => 'admin/users',

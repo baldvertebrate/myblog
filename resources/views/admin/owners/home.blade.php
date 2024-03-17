@@ -25,31 +25,23 @@
                 <thead>
                     <tr>
                         <th style="width: 10px">ID</th>
-                        <th>Owner ID</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Color</th>
-                        <th>Type</th>
-                        <th>PlateNumber</th>
+                        <th>People ID</th>
+                        <th>Vehicle ID</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($vehicles as $vehicle)
+                  @foreach($owners as $owner)
                             <tr>
-                                <td>{{$vehicle->id}}</td>
-                                <td>{{$vehicle->owner_number}}</td>
-                                <td>{{$vehicle->make}}</td>
-                                <td>{{$vehicle->model}}</td>
-                                <td>{{$vehicle->color}}</td>
-                                <td>{{$vehicle->type}}</td>
-                                <td>{{$vehicle->plate_number}}</td>
+                                <td>{{$owner->id}}</td>
+                                <td>{{$owner->people_id}}</td>
+                                <td>{{$owner->vehicle_id}}</td>
                                 <td>
                                     <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr> 
-                    @endforeach
+                  @endforeach
                 </tbody>
             </table>
         </div>
