@@ -11,7 +11,12 @@ class AdminVehicleController extends Controller
     {
         $this->middleware('auth');
     } 
+    public function index(){
+        $vehicles = Vehicle::all();
+        
+        return view ('admin.vehicles.home', ['vehicles' => $vehicles]);
 
+    }
     public function create(){
         return view('admin.vehicles.create');
     }
@@ -19,16 +24,14 @@ class AdminVehicleController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
+            'owner_number' => 'required',
             'make' => 'required',
             'model' => 'required',
             'color' => 'required',
             'type' => 'required',
             'plate_number' => 'required',
-            'owner_id' => 'required'
         ]);
-
         Vehicle::create($data);
-
         return redirect(route('admin.vehicles.index'))->with('status', 'Vehicle has been successfully saved.');
     }
 }

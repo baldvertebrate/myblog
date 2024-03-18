@@ -3,7 +3,7 @@
 @section('title', 'Vehicles')
 
 @section('content_header')
-    <h1>Vehicle</h1>
+    <h1>Blog</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
         <div class="card-header">
                 <h3 class="card-title">Vehicle List</h3>
                 <div class="card-tools">
-                    <a href="{{route('admin.vehicles.create')}}" class="btn btn-primary form-control float-right">Add New Vehicle</a>
+                    <a href="#" class="btn btn-primary form-control float-right">Add New Vehicle</a>
                 </div>
         </div>
         <div class="card-body">
@@ -22,37 +22,29 @@
                 </div> 
             @endif
             <table class="table table-bordered">
-                <thead>
-                    <tr>
+            <tr>
                         <th style="width: 10px">ID</th>
-                        <th>Owner ID</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Color</th>
-                        <th>Type</th>
-                        <th>PlateNumber</th>
+                        <th>Name</th>
+                        <th>Town ID</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($vehicles as $vehicle)
+                  @foreach($barangay as $barangay)
                             <tr>
-                                <td>{{$vehicle->id}}</td>
-                                <td>{{$vehicle->owner_number}}</td>
-                                <td>{{$vehicle->make}}</td>
-                                <td>{{$vehicle->model}}</td>
-                                <td>{{$vehicle->color}}</td>
-                                <td>{{$vehicle->type}}</td>
-                                <td>{{$vehicle->plate_number}}</td>
+                                <td>{{$barangay->id}}</td>
+                                <td>{{$barangay->name}}</td>
+                                <td>{{$barangay->town_id}}</td>
                                 <td>
                                     <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr> 
-                    @endforeach
+                  @endforeach
                 </tbody>
             </table>
         </div>
+
 </div>
 @stop
 

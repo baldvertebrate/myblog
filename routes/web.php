@@ -9,7 +9,11 @@ use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\PeopleController;
-
+use App\Http\Controllers\AdminVehicleController;
+use App\Http\Controllers\AdminPeopleController;
+use App\Http\Controllers\AdminTownController;
+use App\Http\Controllers\AdminBarangayController;
+use App\Http\Controllers\AdminOwnerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,9 +55,9 @@ Route::middleware(['active'])->group(function () {
     Route::put('/admin/blogs/{blog}', [AdminBlogController::class, 'update'])->name('admin.blogs.update');
     Route::get('/admin/blogs/{blog}/delete', [AdminBlogController::class, 'delete'])->name('admin.blogs.delete');
     Route::delete('/admin/blogs/{blog}', [AdminBlogController::class, 'destroy'])->name('admin.blogs.destroy');
+    
 
-    Route::get('/admin/vehicles', [VehicleController::class, 'index'])->name('admin.vehicles.index');
-    Route::get('/admin/vehicles/create', [AdminBlogController::class, 'create'])->name('admin.vehicles.create');
+    
 
     Route::middleware(['admin'])->group(function () {
         Route::get('/admin/users', [AdminUserController::class, 'index'])->name('admin.users.index');
@@ -66,10 +70,24 @@ Route::middleware(['active'])->group(function () {
         Route::get('/admin/users/{user}/reset', [AdminUserController::class, 'reset'])->name('admin.users.reset');
         Route::patch('/admin/users/{user}', [AdminUserController::class, 'resetOk'])->name('admin.users.resetOk');
 
-        Route::get('/admin/people', [PeopleController::class, 'index'])->name('admin.people.index');
+        
+        
     });
     //Vehicles
+    Route::get('/admin/vehicles', [AdminVehicleController::class, 'index'])->name('admin.vehicles.index');
+    Route::post('/admin/vehicles', [AdminVehicleController::class, 'store'])->name('admin.vehicles.store');
+    Route::get('/admin/vehicles/create', [AdminVehicleController::class, 'create'])->name('admin.vehicles.create');
+    //People
+    Route::get('/admin/people', [AdminPeopleController::class, 'index'])->name('admin.people.index');
+    //Towns
+    Route::get('/admin/towns', [AdminTownController::class, 'index'])->name('admin.towns.index');
+    //Barangay
+    Route::get('/admin/barangays', [AdminBarangayController::class, 'index'])->name('admin.barangays.index');
+    //Owners
+    Route::get('/admin/owners', [AdminOwnerController::class, 'index'])->name('admin.owners.index');
     
+
+
 
     Route::get('/admin/auth', [AdminAuthController::class, 'index'])->name('admin.auth.index');
     Route::put('/admin/auth', [AdminAuthController::class, 'changePassword'])->name('admin.auth.changePassword');

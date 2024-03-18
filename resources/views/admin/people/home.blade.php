@@ -29,38 +29,32 @@
                         <th>Middle Name</th>
                         <th>Last Name</th>
                         <th>Sex</th>
-                        <th>Barangay ID</th>
-                        <th>Owner ID</th>
-                        <th>Actions</th>
                         <th>Contact Number</th>
                         <th>Category</th>
                         <th>Email</th>
                         <th>License Code</th>
+                        <th>Barangay ID</th>
                         <th>Actions<th>
-                    </tr>
                 </thead>
                 <tbody>
-                       
+                       @foreach($people as $people)
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$people->id}}</td>
+                                <td>{{$people->first_name}}</td>
+                                <td>{{$people->middle_name}}</td>
+                                <td>{{$people->last_name}}</td>
+                                <td>{{$people->sex}}</td>
+                                <td>{{$people->contact_number}}</td>
+                                <td>{{$people->category}}</td>
+                                <td>{{$people->email}}</td>
+                                <td>{{$people->license_code}}</td>
+                                <td>{{$people->barangay_id}}</td>
                                 <td>
                                     <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr>
-                        
-                    <tr> 
+                        @endforeach
                 </tbody>
             </table>
         </div>
