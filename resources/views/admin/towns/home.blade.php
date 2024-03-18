@@ -1,17 +1,17 @@
 @extends('adminlte::page')
 
-@section('title', 'Vehicles')
+@section('title', 'Towns')
 
 @section('content_header')
-    <h1>Blog</h1>
+    <h1>Town</h1>
 @stop
 
 @section('content')
         <div class="card">
         <div class="card-header">
-                <h3 class="card-title">Vehicle List</h3>
+                <h3 class="card-title">Town List</h3>
                 <div class="card-tools">
-                    <a href="#" class="btn btn-primary form-control float-right">Add New Vehicle</a>
+                    <a href="{{route('admin.towns.create')}}" class="btn btn-primary form-control float-right">Add New Town</a>
                 </div>
         </div>
         <div class="card-body">
@@ -37,8 +37,8 @@
                                 <td>{{$town->name}}</td>
                                 <td>{{$town->zipcode}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
+                                    <a href="{{route('admin.towns.modify', $town)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
+                                    <a href="{{route('admin.towns.delete', $town)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr> 
                   @endforeach

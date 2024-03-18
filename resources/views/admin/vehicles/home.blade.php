@@ -45,8 +45,8 @@
                                 <td>{{$vehicle->type}}</td>
                                 <td>{{$vehicle->plate_number}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
+                                    <a href="{{route('admin.vehicles.modify', $vehicle)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
+                                    <a href="{{route('admin.vehicles.delete', $vehicle)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr> 
                     @endforeach
