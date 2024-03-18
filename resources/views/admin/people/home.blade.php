@@ -11,7 +11,7 @@
         <div class="card-header">
                 <h3 class="card-title">People List</h3>
                 <div class="card-tools">
-                    <a href="#" class="btn btn-primary form-control float-right">Add New Person</a>
+                    <a href="{{route('admin.people.create')}}" class="btn btn-primary form-control float-right">Add New Person</a>
                 </div>
         </div>
         <div class="card-body">
@@ -24,7 +24,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th style="width: 10px">ID</th>
+                        <th style="width: 10px">Person ID</th>
                         <th>First Name</th>
                         <th>Middle Name</th>
                         <th>Last Name</th>
@@ -50,8 +50,8 @@
                                 <td>{{$people->license_code}}</td>
                                 <td>{{$people->barangay_id}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
+                                    <a href="{{route('admin.people.modify', $people)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
+                                    <a href="{{route('admin.people.delete', $people)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr>
                         @endforeach

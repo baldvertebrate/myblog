@@ -3,15 +3,15 @@
 @section('title', 'Vehicles')
 
 @section('content_header')
-    <h1>Blog</h1>
+    <h1>Owners</h1>
 @stop
 
 @section('content')
         <div class="card">
         <div class="card-header">
-                <h3 class="card-title">Vehicle List</h3>
+                <h3 class="card-title">Owners List</h3>
                 <div class="card-tools">
-                    <a href="#" class="btn btn-primary form-control float-right">Add New Vehicle</a>
+                    <a href="{{route('admin.owners.create')}}" class="btn btn-primary form-control float-right">Add New Vehicle</a>
                 </div>
         </div>
         <div class="card-body">
@@ -24,8 +24,8 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th style="width: 10px">ID</th>
-                        <th>People ID</th>
+                        <th style="width: 10px">Owner ID</th>
+                        <th>Person ID</th>
                         <th>Vehicle ID</th>
                         <th>Actions</th>
                     </tr>
@@ -37,8 +37,8 @@
                                 <td>{{$owner->people_id}}</td>
                                 <td>{{$owner->vehicle_id}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
+                                    <a href="{{route('admin.owners.modify', $owner)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
+                                    <a href="{{route('admin.owners.delete', $owner)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
                             </tr> 
                   @endforeach

@@ -17,4 +17,56 @@ class AdminPeopleController extends Controller
         return view ('admin.people.home', ['people' => $people]);
 
     }
+    public function create(){
+        return view('admin.people.create');
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->validate([
+            'first_name' => 'required',
+            'middle_name' => 'required',
+            'last_name' => 'required',
+            'sex' => 'required',
+            'contact_number' => 'required',
+            'category' => 'required',
+            'email' => 'required',
+            'license_code' => 'required',
+            'barangay_id' => 'required', 
+        ]);
+        People::create($data);
+        return redirect(route('admin.people.index'))->with('status', 'Person has been successfully saved.');
+    }
+    public function modify(People $people){
+        return view('admin.people.modify', ['people' => $people]);
+    }
+    public function update(Request $request, People $people){
+        //dd($request);
+        $data = $request->validate([
+            'first_name' => 'required',
+            'middle_name' => 'required',
+            'last_name' => 'required',
+            'sex' => 'required',
+            'contact_number' => 'required',
+            'category' => 'required',
+            'email' => 'required',
+            'license_code' => 'required',
+            'barangay_id' => 'required', 
+
+        ]);
+
+        $people->update($data);
+
+        return redirect(route('admin.people.index', ['people' => $people]))->with('status', 'People has been successfully updated');
+    }
+    public function delete(People $people){
+
+        return view('admin.people.delete', ['people' => $people]);
+
+    }
+    public function destroy(People $people){
+        $people->delete();
+        return redirect(route('admin.people.index'))->with('status', 'Person has been successfully updated');
+        
+    }
 }
