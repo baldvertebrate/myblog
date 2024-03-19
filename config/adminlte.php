@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Russell\'s</b> Blog',
+    'logo' => '<b>VMIS</b>',
     'logo_img' => 'img/Logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -303,7 +303,7 @@ return [
         ],
         */
         [
-            'text'         => 'Russell\'s Blog',
+            'text'         => 'Vehicle Management Information System',
             'url'         => '#',
             'topnav' => true,
         ],
@@ -392,7 +392,6 @@ return [
         ],
         */
         ['header' => 'Menu'],
-
         [
             'text' => 'Vehicles',
             'url'  => 'admin/vehicles',
@@ -400,16 +399,18 @@ return [
             'active' => [],
         ],
         [
-            'text' => 'People',
-            'url'  => 'admin/people',
-            'icon' => 'fas fa-fw fa-book',
-            'active' => [],
-        ],
-        [
-            'text' => 'Owners',
-            'url'  => 'admin/owners',
-            'icon' => 'fas fa-fw fa-book',
-            'active' => [],
+            'text'    => 'People',
+            'icon'    => 'fas fa-fw fa-person',
+            'submenu' => [
+                [
+                    'text' => 'People',
+                    'url'  => 'admin/people',
+                ],
+                [
+                    'text' => 'Owners',
+                    'url'  => 'admin/owners',
+                ],
+            ],
         ],
         ['header' => 'Address'],
         [
@@ -424,6 +425,7 @@ return [
             'icon' => 'fas fa-fw fa-home',
             'active' => [],
         ],
+        
         ['header' => 'User Management'],
         
         [
