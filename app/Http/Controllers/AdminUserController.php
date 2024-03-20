@@ -20,7 +20,7 @@ class AdminUserController extends Controller
 
         return view('admin.users.home', ['users' => $users]);
     }
-
+    
     public function create()
     {
         return view('admin.users.create');

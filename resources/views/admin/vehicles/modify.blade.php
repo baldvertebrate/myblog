@@ -20,7 +20,7 @@
                 <div class="card-body">
                 <div class="form-group">
                         <label for="owner id">Owner ID</label>
-                        <input type="text" name="owner_number" class="form-control @error('owner_number') is-invalid @enderror" id="owner_number" value="{{$vehicle->owner_number}}" placeholder="Enter Owner Number">
+                        <input type="text" name="owner_id" class="form-control @error('owner_id') is-invalid @enderror" id="owner_id" value="{{$vehicle->owner_id}}" placeholder="Enter Owner Number">
                         @error('owner id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

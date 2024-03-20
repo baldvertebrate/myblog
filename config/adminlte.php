@@ -400,14 +400,16 @@ return [
         ],
         [
             'text'    => 'People',
-            'icon'    => 'fas fa-fw fa-person',
+            'icon'    => 'fas fa-fw fa-users',
             'submenu' => [
                 [
                     'text' => 'People',
+                    'icon'    => 'fas fa-fw fa-user',
                     'url'  => 'admin/people',
                 ],
                 [
                     'text' => 'Owners',
+                    'icon'    => 'fas fa-fw fa-user',
                     'url'  => 'admin/owners',
                 ],
             ],
@@ -440,7 +442,7 @@ return [
         [
             'text' => 'Change Password',
             'url'  => 'admin/auth',
-            'icon' => 'fas fa-fw fa-cog',
+            'icon' => 'fas fa-fw fa-lock',
             'active' => ['admin/auth'],
         ],
         

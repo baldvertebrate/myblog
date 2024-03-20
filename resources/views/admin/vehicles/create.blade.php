@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="owner id">Owner ID</label>
-                        <input type="text" name="owner_number" class="form-control @error('owner_number') is-invalid @enderror" id="owner_number" value="{{old('owner_number')}}" placeholder="Enter Owner Number">
+                        <input type="text" name="owner_id" class="form-control @error('owner_id') is-invalid @enderror" id="owner_id" value="{{old('owner_id')}}" placeholder="Enter Owner ID">
                         @error('owner id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -32,7 +32,7 @@
                     </div> 
                     <div class="form-group">
                         <label for="content">Model</label>
-                        <input type="text" name="model" class="form-control @error('make') is-invalid @enderror" id="make" value="{{old('make')}}" placeholder="Enter Vehicle Maker">
+                        <input type="text" name="model" class="form-control @error('make') is-invalid @enderror" id="make" value="{{old('make')}}" placeholder="Enter Vehicle Model">
                         @error('Model')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

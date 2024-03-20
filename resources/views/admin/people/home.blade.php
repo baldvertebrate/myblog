@@ -34,6 +34,7 @@
                         <th>Email</th>
                         <th>License Code</th>
                         <th>Barangay ID</th>
+                        <th>Barangay Name</th>
                         <th>Actions<th>
                 </thead>
                 <tbody>
@@ -49,6 +50,8 @@
                                 <td>{{$people->email}}</td>
                                 <td>{{$people->license_code}}</td>
                                 <td>{{$people->barangay_id}}</td>
+                                <td>{{$people->barangay->name}}</td>
+
                                 <td>
                                     <a href="{{route('admin.people.modify', $people)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="{{route('admin.people.delete', $people)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;

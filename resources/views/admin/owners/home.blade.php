@@ -26,7 +26,12 @@
                     <tr>
                         <th style="width: 10px">Owner ID</th>
                         <th>Person ID</th>
+                        <th>Owner's First Name</th>
+                        <th>Owner's Last Name</th>
                         <th>Vehicle ID</th>
+                        <th>Vehicle Model</th>
+                        <th>Vehicle Type</th>
+                        <th>Vehicle's Plate Number</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -35,7 +40,12 @@
                             <tr>
                                 <td>{{$owner->id}}</td>
                                 <td>{{$owner->people_id}}</td>
+                                <td>{{$owner->people->first_name}}</td>
+                                <td>{{$owner->people->last_name}}</td>
                                 <td>{{$owner->vehicle_id}}</td>
+                                <td>{{$owner->vehicle->model}}</td>
+                                <td>{{$owner->vehicle->type}}</td>
+                                <td>{{$owner->vehicle->plate_number}}</td>
                                 <td>
                                     <a href="{{route('admin.owners.modify', $owner)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="{{route('admin.owners.delete', $owner)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;

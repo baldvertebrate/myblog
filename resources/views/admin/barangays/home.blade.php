@@ -26,15 +26,20 @@
                         <th style="width: 10px">Barangay ID</th>
                         <th>Name</th>
                         <th>Town ID</th>
+                        <th>Town Name</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                   @foreach($barangay as $barangay)
+            
                             <tr>
                                 <td>{{$barangay->id}}</td>
                                 <td>{{$barangay->name}}</td>
                                 <td>{{$barangay->town_id}}</td>
+                                <td>
+                                {{$barangay->town->name}}
+                                </td>
                                 <td>
                                     <a href="{{route('admin.barangays.modify', $barangay)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="{{route('admin.barangays.delete', $barangay)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;

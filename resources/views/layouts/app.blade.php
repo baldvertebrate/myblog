@@ -45,7 +45,7 @@
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="http://127.0.0.1:8000/">{{ __('Home') }}</a>
                                 </li>
                             @endif
                         @else

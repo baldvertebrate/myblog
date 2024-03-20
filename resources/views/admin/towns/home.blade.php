@@ -31,16 +31,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                  @foreach($towns as $town)
-                            <tr>
-                                <td>{{$town->id}}</td>
-                                <td>{{$town->name}}</td>
-                                <td>{{$town->zipcode}}</td>
-                                <td>
+                @foreach($towns as $town)
+                  @php $i=1; @endphp
+                    <tr>
+                        <td>{{ $i }}</td>
+                        <td>
+                                @php 
+                                $barangay = App\Models\barangay::where('id', '=', $town->barangay->id)->first();
+                                @endphp
+                                {{$town->name}}
+                        </td>
+                        <td>{{$town->zipcode}}</td>
+                        <td>
                                     <a href="{{route('admin.towns.modify', $town)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
                                     <a href="{{route('admin.towns.delete', $town)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>&nbsp;
                                 </td>
-                            </tr> 
+                    </tr> 
+                  @php $i++; @endphp
                   @endforeach
                 </tbody>
             </table>
