@@ -57,7 +57,7 @@
 @stop
 
 @section('footer')
-    Copyright &copy 2023. <a href='/admin'>Fernan's Blog</a>. All rights reserved.
+    Copyright &copy 2023. <a href='/admin'>VMIS</a>. All rights reserved.
 @endsection
 
 @section('css')
