@@ -30,16 +30,10 @@ Route::get('/', function () {
 });
 */
 Route::get('/', [App\Http\Controllers\BlogController::class, 'index'])->name('home.index');
+
 Route::get('/blogs/{blog}', [App\Http\Controllers\BlogController::class, 'show'])->name('home.show');
 
 Route::post('/blogs/{blog}', [App\Http\Controllers\CommentController::class, 'store'])->name('home.comment.store');
-
-Route::get('/About', function () {
-    return view('layouts.About');
-});
-Route::get('/contact-us', function () {
-    return view('layouts.contactus');
-});
 
 Auth::routes(['register' => true ]);
 
@@ -57,8 +51,6 @@ Route::middleware(['active'])->group(function () {
     Route::delete('/admin/blogs/{blog}', [AdminBlogController::class, 'destroy'])->name('admin.blogs.destroy');
     
 
-    
-
     Route::middleware(['admin'])->group(function () {
         Route::get('/admin/users', [AdminUserController::class, 'index'])->name('admin.users.index');
         Route::get('/admin/users/create', [AdminUserController::class, 'create'])->name('admin.users.create');
@@ -70,8 +62,6 @@ Route::middleware(['active'])->group(function () {
         Route::get('/admin/users/{user}/reset', [AdminUserController::class, 'reset'])->name('admin.users.reset');
         Route::patch('/admin/users/{user}', [AdminUserController::class, 'resetOk'])->name('admin.users.resetOk');
 
-        
-        
     });
     //Vehicles
     Route::get('/admin/vehicles', [AdminVehicleController::class, 'index'])->name('admin.vehicles.index');
@@ -114,9 +104,6 @@ Route::middleware(['active'])->group(function () {
     Route::get('/admin/owners/{owner}/delete', [AdminOwnerController::class, 'delete'])->name('admin.owners.delete');
     Route::delete('/admin/owners/{owner}', [AdminOwnerController::class, 'destroy'])->name('admin.owners.destroy');
     
-
-
-
     Route::get('/admin/auth', [AdminAuthController::class, 'index'])->name('admin.auth.index');
     Route::put('/admin/auth', [AdminAuthController::class, 'changePassword'])->name('admin.auth.changePassword');
     Route::get('/admin/comments', [App\Http\Controllers\AdminCommentController::class, 'index'])->name('admin.comments.index');
