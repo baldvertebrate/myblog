@@ -40,7 +40,6 @@ class AdminOwnerController extends Controller
             'people_id' => 'required',
             'vehicle_id' => 'required',
         ]);
-
         $owner->update($data);
 
         return redirect(route('admin.owners.index', ['owner' => $owner]))->with('status', 'Owner has been successfully updated');
