@@ -11,7 +11,7 @@
         <div class="card-header">
                 <h3 class="card-title">Owners List</h3>
                 <div class="card-tools">
-                    <a href="{{route('admin.owners.create')}}" class="btn btn-primary form-control float-right">Add New Vehicle</a>
+                    <a href="{{route('admin.owners.create')}}" class="btn btn-primary form-control float-right">Add New Owner</a>
                 </div>
         </div>
         <div class="card-body">

@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Vehicles - > Create a vehicle')
+@section('title', 'Owner - > Create a owner')
 
 @section('content_header')
-    <h1>Vehicles - > Create a new vehicle</h1>
+    <h1>Owner - > Create a new owner</h1>
 @stop
 
 @section('content')
