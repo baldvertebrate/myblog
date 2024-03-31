@@ -14,6 +14,7 @@ use App\Http\Controllers\AdminPeopleController;
 use App\Http\Controllers\AdminTownController;
 use App\Http\Controllers\AdminBarangayController;
 use App\Http\Controllers\AdminOwnerController;
+use App\Http\Controllers\HomePageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +35,8 @@ Route::get('/', [App\Http\Controllers\BlogController::class, 'index'])->name('ho
 Route::get('/blogs/{blog}', [App\Http\Controllers\BlogController::class, 'show'])->name('home.show');
 
 Route::post('/blogs/{blog}', [App\Http\Controllers\CommentController::class, 'store'])->name('home.comment.store');
-
+Route::get('/about',[HomePageController::class, 'aboutindex'])->name('layouts.about');
+Route::get('/contactus',[HomePageController::class, 'contactus'])->name('layouts.contactus');
 Auth::routes(['register' => true ]);
 
 

@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        '/about', // Add the URI of your about page route
+        '/contact-us', // Add the URI of your contact-us page route
     ];
 }
