@@ -64,12 +64,12 @@ return [
     */
 
     'logo' => '<b>VMIS</b>',
-    'logo_img' => 'img/Logo.png',
+    /* Logo Image
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'Admin Logo',
-
+        */
     /*
     |--------------------------------------------------------------------------
     | Authentication Logo
@@ -391,6 +391,13 @@ return [
             'url'        => '#',
         ],
         */
+        ['header' => 'Dashboard'],
+        [
+            'text' => 'Home',
+            'url'  => 'admin',
+            'icon' => 'fas fa-fw fa-home',
+            'active' => [],
+        ],
         ['header' => 'Menu'],
         [
             'text' => 'Vehicles',
