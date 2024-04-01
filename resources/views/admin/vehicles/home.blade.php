@@ -58,20 +58,16 @@
 </div>
 @stop
 
+@section('footer')
+Copyright &copy; 2024. <strong>RES Admin</strong>. All rights reserved.
+@endsection
+
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-
-<link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-
-<link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-<link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+<link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-
-    <script> console.log('Hi!'); </script>
+<script> console.log('Hi!'); </script>
     <script src="../../plugins/jquery/jquery.min.js"></script>
 
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
