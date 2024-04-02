@@ -21,8 +21,10 @@ return new class extends Migration
             $table->string('sex');
             $table->string('contact_number');
             $table->string('category');
+            $table->string('specifics');
             $table->string('email');
             $table->string('license_code');
+            $table->string('Town');
             $table->integer('barangay_id');
             $table->timestamps();
         });

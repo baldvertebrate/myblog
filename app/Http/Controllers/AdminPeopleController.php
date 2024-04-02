@@ -30,9 +30,11 @@ class AdminPeopleController extends Controller
             'sex' => 'required',
             'contact_number' => 'required',
             'category' => 'required',
+            'specifics' => 'required',
             'email' => 'required',
             'license_code' => 'required',
             'barangay_id' => 'required', 
+            'Town' => 'required', 
         ]);
         People::create($data);
         return redirect(route('admin.people.index'))->with('status', 'Person has been successfully saved.');
@@ -49,9 +51,11 @@ class AdminPeopleController extends Controller
             'sex' => 'required',
             'contact_number' => 'required',
             'category' => 'required',
+            'specifics' => 'required',
             'email' => 'required',
             'license_code' => 'required',
             'barangay_id' => 'required', 
+            'Town' => 'required',  
 
         ]);
 

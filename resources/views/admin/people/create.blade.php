@@ -67,6 +67,15 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label for="content">Specifics</label>
+                        <input type="text" name="specifics" class="form-control @error('specifics') is-invalid @enderror" id="category" value="{{old('specifics')}}" placeholder="Enter Person Specifics">
+                        @error('specifics')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="content">Email</label>
                         <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{old('email')}}" placeholder="Enter Email">
                         @error('email')
@@ -85,14 +94,29 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="content">Barangay ID</label>
-                        <input type="text" name="barangay_id" class="form-control @error('barangay_id') is-invalid @enderror" id="barangay_id" value="{{old('barangay_id')}}" placeholder="Enter Barangay ID">
-                        @error('license code')
+                        <label for="content">Town</label>
+                        <input type="text" name="Town" class="form-control @error('Town') is-invalid @enderror" id="Town" value="{{old('Town')}}" placeholder="Enter Town Name">
+                        @error('Town')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
+                    <div class="form-group">
+                        <label for="content">Barangay ID</label>
+                        <input type="text" name="barangay_id" class="form-control @error('barangay_id') is-invalid @enderror" id="barangay_id" value="{{ old('barangay_id') }}" placeholder="Enter Barangay ID">
+                        @error('barangay_id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        @if ($errors->has('barangay_id') && $errors->first('barangay_id') === "The selected barangay ID is invalid.")
+                        <span class="invalid-feedback" role="alert">
+                            <strong>The provided Barangay ID does not exist.</strong>
+                        </span>
+                        @endif
+                        </div>
+
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Save</button>
                     <a href="{{route('admin.people.index')}}" type="button" class="btn btn-default float-right">Cancel</a>

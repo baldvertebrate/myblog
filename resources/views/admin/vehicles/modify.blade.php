@@ -18,15 +18,6 @@
             @csrf
             @method('put')
                 <div class="card-body">
-                <div class="form-group">
-                        <label for="owner id">Owner ID</label>
-                        <input type="text" name="owner_id" class="form-control @error('owner_id') is-invalid @enderror" id="owner_id" value="{{$vehicle->owner_id}}" placeholder="Enter Owner Number">
-                        @error('owner id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                         @enderror
-                    </div>
                     <div class="form-group">
                         <label for="content">Make</label>
                         <input type="text" name="make" class="form-control @error('make') is-invalid @enderror" id="make" value="{{$vehicle->make}}" placeholder="Enter Vehicle Maker">
@@ -44,6 +35,15 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="owner id">Year</label>
+                        <input type="text" name="year" class="form-control @error('year') is-invalid @enderror" id="year" value="{{$vehicle->year}}" placeholder="Enter Year">
+                        @error('year')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="content">Color</label>

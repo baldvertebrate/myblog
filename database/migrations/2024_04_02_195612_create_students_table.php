@@ -13,18 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vehicles', function (Blueprint $table) {
+        Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->integer('owner_id');
-            $table->string('make');
-            $table->string('model');
-            $table->string('color');
-            $table->string('type');
-            $table->string('plate_number');
+            $table->integer('people_id');
+            $table->string('Level');
+            $table->string('Section');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vehicles');
+        Schema::dropIfExists('students');
     }
 };

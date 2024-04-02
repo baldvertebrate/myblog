@@ -13,15 +13,6 @@
             @method('post')
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="owner id">Owner ID</label>
-                        <input type="text" name="owner_id" class="form-control @error('owner_id') is-invalid @enderror" id="owner_id" value="{{old('owner_id')}}" placeholder="Enter Owner ID">
-                        @error('owner id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                         @enderror
-                    </div>
-                    <div class="form-group">
                         <label for="content">Make</label>
                         <input type="text" name="make" class="form-control @error('make') is-invalid @enderror" id="make" value="{{old('make')}}" placeholder="Enter Vehicle Maker">
                         @error('Make')
@@ -38,6 +29,15 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="owner id">Year</label>
+                        <input type="text" name="year" class="form-control @error('year') is-invalid @enderror" id="year" value="{{old('year')}}" placeholder="Enter Vehicle Year">
+                        @error('year')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="content">Color</label>

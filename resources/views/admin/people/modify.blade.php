@@ -73,6 +73,15 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label for="owner id">Specifics</label>
+                        <input type="text" name="specifics" class="form-control @error('specifics') is-invalid @enderror" id="first_name" value="{{$people->specifics}}" placeholder="Enter Specifics">
+                        @error('specifics')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                         @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="content">Email</label>
                         <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{$people->email}}" placeholder="Enter Email">
                         @error('email')
@@ -91,9 +100,18 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label for="content">Town Name</label>
+                        <input type="text" name="Town" class="form-control @error('Town') is-invalid @enderror" id="Town" value="{{$people->Town}}" placeholder="Enter Town Name">
+                        @error('town')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="content">Barangay ID</label>
                         <input type="text" name="barangay_id" class="form-control @error('barangay_id') is-invalid @enderror" id="barangay_id" value="{{$people->barangay_id}}" placeholder="Enter Barangay ID">
-                        @error('license code')
+                        @error('barangay_id')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

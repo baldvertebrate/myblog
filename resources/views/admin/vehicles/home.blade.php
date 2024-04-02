@@ -27,9 +27,9 @@
                 <thead>
                     <tr>
                         <th style="width: 10px">ID</th>
-                        <th>Owner ID</th>
                         <th>Make</th>
                         <th>Model</th>
+                        <th>Year</th>
                         <th>Color</th>
                         <th>Type</th>
                         <th>PlateNumber</th>
@@ -40,9 +40,9 @@
                     @foreach($vehicles as $vehicle)
                             <tr>
                                 <td>{{$vehicle->id}}</td>
-                                <td>{{$vehicle->owner_id}}</td>
                                 <td>{{$vehicle->make}}</td>
                                 <td>{{$vehicle->model}}</td>
+                                <td>{{$vehicle->year}}</td>
                                 <td>{{$vehicle->color}}</td>
                                 <td>{{$vehicle->type}}</td>
                                 <td>{{$vehicle->plate_number}}</td>

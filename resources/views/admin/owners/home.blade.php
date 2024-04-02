@@ -28,7 +28,7 @@
                         <th>Person ID</th>
                         <th>Owner's First Name</th>
                         <th>Owner's Last Name</th>
-                        <th>Vehicle ID</th>
+                        <th>Owner's License Code</th>
                         <th>Vehicle Model</th>
                         <th>Vehicle Type</th>
                         <th>Vehicle's Plate Number</th>
@@ -42,7 +42,7 @@
                                 <td>{{$owner->people_id}}</td>
                                 <td>{{$owner->people->first_name}}</td>
                                 <td>{{$owner->people->last_name}}</td>
-                                <td>{{$owner->vehicle_id}}</td>
+                                <td>{{$owner->people->license_code}}</td>
                                 <td>{{$owner->vehicle->model}}</td>
                                 <td>{{$owner->vehicle->type}}</td>
                                 <td>{{$owner->vehicle->plate_number}}</td>

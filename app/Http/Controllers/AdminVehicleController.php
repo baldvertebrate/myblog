@@ -24,9 +24,9 @@ class AdminVehicleController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'owner_id' => 'required',
             'make' => 'required',
             'model' => 'required',
+            'year' => 'required',
             'color' => 'required',
             'type' => 'required',
             'plate_number' => 'required',
@@ -40,9 +40,9 @@ class AdminVehicleController extends Controller
     public function update(Request $request, Vehicle $vehicle){
         //dd($request);
         $data = $request->validate([
-            'owner_id' => 'required',
             'make' => 'required',
             'model' => 'required',
+            'year' => 'required',
             'color' => 'required',
             'type' => 'required',
             'plate_number' => 'required',

@@ -31,9 +31,10 @@
                         <th>Sex</th>
                         <th>Contact Number</th>
                         <th>Category</th>
+                        <th>Specifics</th>
                         <th>Email</th>
                         <th>License Code</th>
-                        <th>Barangay ID</th>
+                        <th>Town Name</th>
                         <th>Barangay Name</th>
                         <th>Actions<th>
                 </thead>
@@ -47,10 +48,12 @@
                                 <td>{{$people->sex}}</td>
                                 <td>{{$people->contact_number}}</td>
                                 <td>{{$people->category}}</td>
+                                <td>{{$people->specifics}}</td>
                                 <td>{{$people->email}}</td>
                                 <td>{{$people->license_code}}</td>
-                                <td>{{$people->barangay_id}}</td>
+                                <td>{{$people->Town}}</td>
                                 <td>{{$people->barangay->name}}</td>
+                                
 
                                 <td>
                                     <a href="{{route('admin.people.modify', $people)}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
