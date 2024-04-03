@@ -21,6 +21,8 @@
                     {{session('status')}}
                 </div> 
             @endif
+            <div class= "table-responsive"> 
+                <div class= "card-body scrollable-card">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -54,16 +56,16 @@
                                 </td>
                             </tr> 
                   @endforeach
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
+    </div>
 </div>
 @stop
-
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
-
 @section('js')   
 <script> console.log('Hi!'); </script> 
 <script src="http://127.0.0.1:8000/vendor/jquery/jquery.min.js"></script>
