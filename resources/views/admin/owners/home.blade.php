@@ -21,22 +21,23 @@
                     {{session('status')}}
                 </div> 
             @endif
-            <div class= "table-responsive"> 
+            <div class= "table-responsive">  
                 <div class= "card-body scrollable-card">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th style="width: 10px">Owner ID</th>
-                        <th>Person ID</th>
-                        <th>Owner's First Name</th>
-                        <th>Owner's Last Name</th>
+                        <th style="width: 10px">ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
                         <th>Category</th>
                         <th>Specifics</th>
+                        <th>Town</th>
+                        <th>Barangay</th>
                         <th>Contact No</th>
-                        <th>Owner's License Code</th>
+                        <th>License No</th>
                         <th>Vehicle Model</th>
                         <th>Vehicle Type</th>
-                        <th>Vehicle's Plate Number</th>
+                        <th>Plate Number</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -44,11 +45,12 @@
                   @foreach($owners as $owner)
                             <tr>
                                 <td>{{$owner->id}}</td>
-                                <td>{{$owner->people_id}}</td>
                                 <td>{{$owner->people->first_name}}</td>
                                 <td>{{$owner->people->last_name}}</td>
                                 <td>{{$owner->people->category}}</td>
                                 <td>{{$owner->people->specifics}}</td>
+                                <td>{{$owner->people->Town}}</td>
+                                <td>{{$owner->people->barangay->name}}</td>
                                 <td>{{$owner->people->contact_number}}</td>
                                 <td>{{$owner->people->license_code}}</td>
                                 <td>{{$owner->vehicle->model}}</td>

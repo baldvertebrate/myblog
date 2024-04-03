@@ -400,28 +400,22 @@ return [
         ],
         ['header' => 'Menu'],
         [
+            'text' => 'Vehicles & Owners',
+            'icon'    => 'fas fa-fw fa-user',
+            'url'  => 'admin/owners',
+        ],
+        ['header' => 'Admin'],
+        [
             'text' => 'Vehicles',
             'url'  => 'admin/vehicles',
             'icon' => 'fas fa-fw fa-motorcycle',
             'active' => [],
         ],
         [
-            'text'    => 'People',
+            'text' => 'People',
             'icon'    => 'fas fa-fw fa-users',
-            'submenu' => [
-                [
-                    'text' => 'People',
-                    'icon'    => 'fas fa-fw fa-user',
-                    'url'  => 'admin/people',
-                ],
-                [
-                    'text' => 'Owners',
-                    'icon'    => 'fas fa-fw fa-user',
-                    'url'  => 'admin/owners',
-                ],
-            ],
+            'url'  => 'admin/people',
         ],
-        ['header' => 'Address'],
         [
             'text' => 'Town',
             'url'  => 'admin/towns',

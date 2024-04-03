@@ -52,13 +52,47 @@
     h1 {
         text-align: Center;
     }
+
+
+.bg-image {
+    position: relative;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black */
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.image-container img {
+    opacity: 1; /* Resetting opacity to 1 (fully opaque) */
+}
+
+
 </style>
 </head>
 <body class="hold-transition sidebar-collapse layout-fixed layout-footer-fixed layout-navbar-fixed">
     <div class="wrapper" id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container px-5">
-        <a class="navbar-brand" href="/">Vehicle Management Information System</a>
+        <a class="navbar-brand" href="/">VMIS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -81,23 +115,28 @@
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Header-->
-            <header class="bg-dark py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h2 class="display-5 fw-bolder text-white mb-2">Vehicle Management Information System</h2>
-                                <p class="lead fw-normal text-white-50 mb-4">San Agustin National High School</p>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="http://127.0.0.1:8000/login">Get Started</a>
-                                    <a class="btn btn-outline-light btn-lg px-4" href="{{ route('layouts.about') }}">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="img/sanhs logo png.png" alt="..." /></div>
+            <header class="bg-image py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start header-content">
+                    <h2 class="display-5 fw-bolder text-white mb-2">Vehicle Management Information System</h2>
+                    <p class="lead fw-normal text-white-50 mb-4">San Agustin National High School</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{{ route('login') }}">Get Started</a>
+                        <a class="btn btn-outline-light btn-lg px-4" href="{{ route('layouts.about') }}">Learn More</a>
                     </div>
                 </div>
-            </header>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                <div class="image-container">
+                    <img class="img-fluid rounded-3 my-5" src="img/sanhs logo png.png" alt="..." />
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
             <!-- Features section-->
             
             </section>
@@ -110,7 +149,7 @@
                                 <div class="fs-4 mb-4 fst-italic">"We strive for excellence"</div>
                                 <div class="d-flex align-items-center justify-content-center">
                                     <div class="fw-bold">
-                                       -Reserchers
+                                       -Researchers
                                         <span class="fw-bold text-primary mx-1"></span>
                                         
                                     </div>

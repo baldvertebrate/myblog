@@ -99,9 +99,8 @@ Route::middleware(['active'])->group(function () {
         Route::put('/admin/owners/{owner}', [AdminOwnerController::class, 'update'])->name('admin.owners.update');
         Route::get('/admin/owners/{owner}/delete', [AdminOwnerController::class, 'delete'])->name('admin.owners.delete');
         Route::delete('/admin/owners/{owner}', [AdminOwnerController::class, 'destroy'])->name('admin.owners.destroy');
-    });
 
-    //Vehicles
+        //Vehicles
     Route::get('/admin/vehicles', [AdminVehicleController::class, 'index'])->name('admin.vehicles.index');
     Route::post('/admin/vehicles', [AdminVehicleController::class, 'store'])->name('admin.vehicles.store');
     
@@ -116,6 +115,9 @@ Route::middleware(['active'])->group(function () {
     //Barangay
     Route::get('/admin/barangays', [AdminBarangayController::class, 'index'])->name('admin.barangays.index');
     Route::post('/admin/barangays', [AdminBarangayController::class, 'store'])->name('admin.barangays.store');
+    });
+
+    
     
     //Owners
     Route::get('/admin/owners', [AdminOwnerController::class, 'index'])->name('admin.owners.index');
