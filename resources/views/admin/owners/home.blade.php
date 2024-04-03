@@ -31,6 +31,8 @@
                         <th>Owner's First Name</th>
                         <th>Owner's Last Name</th>
                         <th>Category</th>
+                        <th>Specifics</th>
+                        <th>Contact No</th>
                         <th>Owner's License Code</th>
                         <th>Vehicle Model</th>
                         <th>Vehicle Type</th>
@@ -46,6 +48,8 @@
                                 <td>{{$owner->people->first_name}}</td>
                                 <td>{{$owner->people->last_name}}</td>
                                 <td>{{$owner->people->category}}</td>
+                                <td>{{$owner->people->specifics}}</td>
+                                <td>{{$owner->people->contact_number}}</td>
                                 <td>{{$owner->people->license_code}}</td>
                                 <td>{{$owner->vehicle->model}}</td>
                                 <td>{{$owner->vehicle->type}}</td>
@@ -68,10 +72,7 @@
 @stop
 @section('js')   
 <script> console.log('Hi!'); </script> 
-<script src="http://127.0.0.1:8000/vendor/jquery/jquery.min.js"></script>
-<script src="http://127.0.0.1:8000/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="http://127.0.0.1:8000/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script src="http://127.0.0.1:8000/vendor/adminlte/dist/js/adminlte.min.js"></script> 
+
 <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
 <script src="//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
 <script src="../../plugins/jquery/jquery.min.js"></script>

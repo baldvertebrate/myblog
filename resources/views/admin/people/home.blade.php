@@ -22,7 +22,7 @@
                 </div> 
             @endif
             <div class= "table-responsive">
-            <table id="example2" class="table table-bordered table-striped">
+            <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th style="width: 10px">Person ID</th>
@@ -76,10 +76,6 @@
 @section('js')
 </div>
 <script> console.log('Hi!'); </script> 
-<script src="http://127.0.0.1:8000/vendor/jquery/jquery.min.js"></script>
-<script src="http://127.0.0.1:8000/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="http://127.0.0.1:8000/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script src="http://127.0.0.1:8000/vendor/adminlte/dist/js/adminlte.min.js"></script> 
 <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
 <script src="//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
 <script src="../../plugins/jquery/jquery.min.js"></script>
@@ -100,11 +96,11 @@
 <script src="../../dist/js/demo.js"></script>
 <script>
   $(function () {
-    $("#example2").DataTable({
+    $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example3').DataTable({
+    $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,
