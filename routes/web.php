@@ -65,45 +65,42 @@ Route::middleware(['active'])->group(function () {
         Route::patch('/admin/users/{user}', [AdminUserController::class, 'resetOk'])->name('admin.users.resetOk');
 
         Route::get('/admin/vehicles/create', [AdminVehicleController::class, 'create'])->name('admin.vehicles.create');
-    Route::get('/admin/vehicles/{vehicle}', [AdminVehicleController::class, 'modify'])->name('admin.vehicles.modify');
-    Route::put('/admin/vehicles/{vehicle}', [AdminVehicleController::class, 'update'])->name('admin.vehicles.update');
-    Route::get('/admin/vehicles/{vehicle}/delete', [AdminVehicleController::class, 'delete'])->name('admin.vehicles.delete');
-    Route::delete('/admin/vehicles/{vehicle}', [AdminVehicleController::class, 'destroy'])->name('admin.vehicles.destroy');
+        Route::get('/admin/vehicles/{vehicle}', [AdminVehicleController::class, 'modify'])->name('admin.vehicles.modify');
+        Route::put('/admin/vehicles/{vehicle}', [AdminVehicleController::class, 'update'])->name('admin.vehicles.update');
+        Route::get('/admin/vehicles/{vehicle}/delete', [AdminVehicleController::class, 'delete'])->name('admin.vehicles.delete');
+        Route::delete('/admin/vehicles/{vehicle}', [AdminVehicleController::class, 'destroy'])->name('admin.vehicles.destroy');
 
+        Route::get('/admin/people/create', [AdminPeopleController::class, 'create'])->name('admin.people.create');
+        Route::get('/admin/people/{people}', [AdminPeopleController::class, 'modify'])->name('admin.people.modify');
+        Route::put('/admin/people/{people}', [AdminPeopleController::class, 'update'])->name('admin.people.update');
+        Route::get('/admin/people/{people}/delete', [AdminPeopleController::class, 'delete'])->name('admin.people.delete');
+        Route::delete('/admin/people/{people}', [AdminPeopleController::class, 'destroy'])->name('admin.people.destroy');
 
-    Route::get('/admin/people/create', [AdminPeopleController::class, 'create'])->name('admin.people.create');
-    Route::get('/admin/people/{people}', [AdminPeopleController::class, 'modify'])->name('admin.people.modify');
-    Route::put('/admin/people/{people}', [AdminPeopleController::class, 'update'])->name('admin.people.update');
-    Route::get('/admin/people/{people}/delete', [AdminPeopleController::class, 'delete'])->name('admin.people.delete');
-    Route::delete('/admin/people/{people}', [AdminPeopleController::class, 'destroy'])->name('admin.people.destroy');
-    
+        Route::get('/admin/towns/create', [AdminTownController::class, 'create'])->name('admin.towns.create');
+        Route::get('/admin/towns/{town}', [AdminTownController::class, 'modify'])->name('admin.towns.modify');
+        Route::put('/admin/towns/{town}', [AdminTownController::class, 'update'])->name('admin.towns.update');
+        Route::get('/admin/towns/{town}/delete', [AdminTownController::class, 'delete'])->name('admin.towns.delete');
+        Route::delete('/admin/towns/{town}', [AdminTownController::class, 'destroy'])->name('admin.towns.destroy');
 
-    Route::get('/admin/towns/create', [AdminTownController::class, 'create'])->name('admin.towns.create');
-    Route::get('/admin/towns/{town}', [AdminTownController::class, 'modify'])->name('admin.towns.modify');
-    Route::put('/admin/towns/{town}', [AdminTownController::class, 'update'])->name('admin.towns.update');
-    Route::get('/admin/towns/{town}/delete', [AdminTownController::class, 'delete'])->name('admin.towns.delete');
-    Route::delete('/admin/towns/{town}', [AdminTownController::class, 'destroy'])->name('admin.towns.destroy');
+        Route::get('/admin/towns/create', [AdminTownController::class, 'create'])->name('admin.towns.create');
+        Route::get('/admin/towns/{town}', [AdminTownController::class, 'modify'])->name('admin.towns.modify');
+        Route::put('/admin/towns/{town}', [AdminTownController::class, 'update'])->name('admin.towns.update');
+        Route::get('/admin/towns/{town}/delete', [AdminTownController::class, 'delete'])->name('admin.towns.delete');
+        Route::delete('/admin/towns/{town}', [AdminTownController::class, 'destroy'])->name('admin.towns.destroy');    
 
-    Route::get('/admin/towns/create', [AdminTownController::class, 'create'])->name('admin.towns.create');
-    Route::get('/admin/towns/{town}', [AdminTownController::class, 'modify'])->name('admin.towns.modify');
-    Route::put('/admin/towns/{town}', [AdminTownController::class, 'update'])->name('admin.towns.update');
-    Route::get('/admin/towns/{town}/delete', [AdminTownController::class, 'delete'])->name('admin.towns.delete');
-    Route::delete('/admin/towns/{town}', [AdminTownController::class, 'destroy'])->name('admin.towns.destroy');    
+        Route::get('/admin/barangays/create', [AdminBarangayController::class, 'create'])->name('admin.barangays.create');
+        Route::get('/admin/barangays/{barangay}', [AdminBarangayController::class, 'modify'])->name('admin.barangays.modify');
+        Route::put('/admin/barangays/{barangay}', [AdminBarangayController::class, 'update'])->name('admin.barangays.update');
+        Route::get('/admin/barangays/{barangay}/delete', [AdminBarangayController::class, 'delete'])->name('admin.barangays.delete');
+        Route::delete('/admin/barangays/{barangay}', [AdminBarangayController::class, 'destroy'])->name('admin.barangays.destroy');    
 
-    Route::get('/admin/barangays/create', [AdminBarangayController::class, 'create'])->name('admin.barangays.create');
-    Route::get('/admin/barangays/{barangay}', [AdminBarangayController::class, 'modify'])->name('admin.barangays.modify');
-    Route::put('/admin/barangays/{barangay}', [AdminBarangayController::class, 'update'])->name('admin.barangays.update');
-    Route::get('/admin/barangays/{barangay}/delete', [AdminBarangayController::class, 'delete'])->name('admin.barangays.delete');
-    Route::delete('/admin/barangays/{barangay}', [AdminBarangayController::class, 'destroy'])->name('admin.barangays.destroy');    
+        Route::get('/admin/owners/create', [AdminOwnerController::class, 'create'])->name('admin.owners.create');
+        Route::get('/admin/owners/{owner}', [AdminOwnerController::class, 'modify'])->name('admin.owners.modify');
+        Route::put('/admin/owners/{owner}', [AdminOwnerController::class, 'update'])->name('admin.owners.update');
+        Route::get('/admin/owners/{owner}/delete', [AdminOwnerController::class, 'delete'])->name('admin.owners.delete');
+        Route::delete('/admin/owners/{owner}', [AdminOwnerController::class, 'destroy'])->name('admin.owners.destroy');
+    });
 
-    Route::get('/admin/owners/create', [AdminOwnerController::class, 'create'])->name('admin.owners.create');
-    Route::get('/admin/owners/{owner}', [AdminOwnerController::class, 'modify'])->name('admin.owners.modify');
-    Route::put('/admin/owners/{owner}', [AdminOwnerController::class, 'update'])->name('admin.owners.update');
-    Route::get('/admin/owners/{owner}/delete', [AdminOwnerController::class, 'delete'])->name('admin.owners.delete');
-    Route::delete('/admin/owners/{owner}', [AdminOwnerController::class, 'destroy'])->name('admin.owners.destroy');
-    
-    
-});
     //Vehicles
     Route::get('/admin/vehicles', [AdminVehicleController::class, 'index'])->name('admin.vehicles.index');
     Route::post('/admin/vehicles', [AdminVehicleController::class, 'store'])->name('admin.vehicles.store');

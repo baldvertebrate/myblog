@@ -303,7 +303,7 @@ return [
         ],
         */
         [
-            'text'         => 'Vehicle Management Information System',
+            'text'         => 'VMIS',
             'url'         => '#',
             'topnav' => true,
         ],
