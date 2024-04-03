@@ -65,7 +65,7 @@
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('layouts.about') }}">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('layouts.contactus') }}">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
             </ul>
         </div>
     </div>

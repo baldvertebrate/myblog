@@ -21,13 +21,14 @@
                     {{session('status')}}
                 </div> 
             @endif
-            <table class="table table-bordered">
+            <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th style="width: 10px">Owner ID</th>
                         <th>Person ID</th>
                         <th>Owner's First Name</th>
                         <th>Owner's Last Name</th>
+                        <th>Category</th>
                         <th>Owner's License Code</th>
                         <th>Vehicle Model</th>
                         <th>Vehicle Type</th>
@@ -42,6 +43,7 @@
                                 <td>{{$owner->people_id}}</td>
                                 <td>{{$owner->people->first_name}}</td>
                                 <td>{{$owner->people->last_name}}</td>
+                                <td>{{$owner->people->category}}</td>
                                 <td>{{$owner->people->license_code}}</td>
                                 <td>{{$owner->vehicle->model}}</td>
                                 <td>{{$owner->vehicle->type}}</td>
@@ -62,6 +64,45 @@
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
-@section('js')
-    <script> console.log('Hi!'); </script>
+@section('js')   
+<script> console.log('Hi!'); </script> 
+<script src="http://127.0.0.1:8000/vendor/jquery/jquery.min.js"></script>
+<script src="http://127.0.0.1:8000/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://127.0.0.1:8000/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="http://127.0.0.1:8000/vendor/adminlte/dist/js/adminlte.min.js"></script> 
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+<script src="//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
+<script src="../../dist/js/demo.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 @stop

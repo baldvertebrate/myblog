@@ -67,6 +67,8 @@ Copyright &copy; 2024. <strong>RES Admin</strong>. All rights reserved.
 @stop
 
 @section('js')
+</div>
+
 <script> console.log('Hi!'); </script>
     <script src="../../plugins/jquery/jquery.min.js"></script>
 
