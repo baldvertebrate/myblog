@@ -14,4 +14,8 @@ class HomePageController extends Controller
     {
         return view('layouts.contactus');
     }
+    public function home()
+    {
+        return view('layouts.home');
+    }
 }

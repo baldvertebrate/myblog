@@ -37,6 +37,7 @@ Route::get('/blogs/{blog}', [App\Http\Controllers\BlogController::class, 'show']
 Route::post('/blogs/{blog}', [App\Http\Controllers\CommentController::class, 'store'])->name('home.comment.store');
 Route::get('/about',[HomePageController::class, 'aboutindex'])->name('layouts.about');
 Route::get('/contactus',[HomePageController::class, 'contactus'])->name('layouts.contactus');
+Route::get('/home',[HomePageController::class, 'home'])->name('layouts.home');
 Auth::routes(['register' => true ]);
 
 
