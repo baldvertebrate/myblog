@@ -123,15 +123,13 @@
                     <h2 class="display-5 fw-bolder text-white mb-2">Vehicle Management Information System</h2>
                     <p class="lead fw-normal text-white-50 mb-4">San Agustin National High School</p>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{{ route('login') }}">Get Started</a>
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{{ route('login') }}">Log-In</a>
                         <a class="btn btn-outline-light btn-lg px-4" href="{{ route('layouts.about') }}">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-                <div class="image-container">
-                    <img class="img-fluid rounded-3 my-5" src="img/sanhs logo png.png" alt="..." />
-                </div>
+                
             </div>
         </div>
     </div>
